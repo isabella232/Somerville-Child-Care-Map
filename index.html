@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-    <title>Searchable Map Template Demo</title>
+    <title>Somerville Early Childhood Map</title>
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta content='' name='description' />
@@ -23,12 +23,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class='navbar-brand' href='index.html'>Searchable Map Template</a>
+          <a class='navbar-brand' href='index.html'>Somerville Early Childhood Map</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class='active'><a href="index.html">Map</a></li>
-            <li><a href="about.html">About</a></li>
+            <!-- <li><a href="about.html">About</a></li> -->
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -36,7 +36,10 @@
     <div class='container-fluid'>
       <div class='row'>
         <div class='col-md-4'>
-          <p>This is a demo of <a href='http://derekeder.com'>Derek Eder's</a> <a href='http://derekeder.com/searchable_map_template/'>Searchable Map Template</a> using Google <a href='http://support.google.com/fusiontables/answer/2571232?hl=en&ref_topic=1652595'>Fusion Tables</a>. Use this section to give a little context to your map.</p>
+          <p>This is a searchable map of early childhood care locations in Somerville, Massachusetts.</p>
+          <p>The code that powers the map comes from <a href='http://derekeder.com'>Derek Eder's</a> <a href='http://derekeder.com/searchable_map_template/'>Searchable Map Template</a> using Google <a href='http://support.google.com/fusiontables/answer/2571232?hl=en&ref_topic=1652595'>Fusion Tables</a>.
+          <p> The data behind the map comes from Code for Boston's <a href="https://github.com/codeforboston/child-care-finder-data) & [child-care-finder](https://github.com/codeforboston/child-care-finder">Child Care Finder Data repo</a>, filtered to include only Somerville locations.</p>
+          <p><a href="index_iframe.html">See iframe view.</a></p>
           <div class='well'>
             <h4>
               Address <small>(<a id='find_me' href='#'>find me</a>)</small>
@@ -56,7 +59,7 @@
               </label>
             </p>
 
-            <br />
+<!--             <br />
             <h4>Custom filters and views</h4>
             <p>Take a look at the <a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples'>wiki</a> to see how to add your own custom filters and views like:</p>
             <div class='row'>
@@ -77,7 +80,7 @@
               </div>
             </div>
             <br />
-            <a class='btn btn-primary' id='search' href='#'>
+ -->            <a class='btn btn-primary' id='search' href='#'>
               <i class='glyphicon glyphicon-search'></i>
               Search
             </a>
@@ -118,11 +121,11 @@
         
         $(function() {
           var myMap = new MapsLib({
-            fusionTableId:      "1m4Ez9xyTGfY2CU6O-UgEcPzlS0rnzLU93e4Faa0",
-            googleApiKey:       "AIzaSyA3FQFrNr5W2OEVmuENqhb2MBB2JabdaOY",
+            fusionTableId:      "1cT4q3W5QiWte9NjdvG5mvBbG0Mb3cyncSGm9MOtW",
+            googleApiKey:       "AIzaSyBZPjfF7WC8FwBRl2AR20BBb4JTk6TUByg",
             locationColumn:     "geometry",
-            map_center:         [41.8781136, -87.66677856445312],
-            locationScope:      "chicago",
+            map_center:         [42.3875, -71.1000],
+            locationScope:      "somerville",
           });
 
           var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));
