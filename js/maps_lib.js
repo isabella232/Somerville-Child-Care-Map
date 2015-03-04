@@ -18,7 +18,7 @@
         // name of the location column in your Fusion Table.
         // NOTE: if your location column name has spaces in it, surround it with single quotes
         // example: locationColumn:     "'my location'",
-        this.locationColumn = options.locationColumn || "geometry";
+        this.locationColumn = options.locationColumn || "Address";
         
         // appends to all address searches if not present
         this.locationScope = options.locationScope || "chicago";
@@ -130,6 +130,13 @@
             self.whereClause = self.locationColumn + " not equal to ''";
             self.whereClause += extraClauses;
             //-----custom filters-------
+
+            var type_column = "'Program Type'";
+            var tempWhereClause = [];
+            if ( $("#cbType1").is(':checked')) tempWhereClause.push("Family Child Care");
+            if ( $("#cbType2").is(':checked')) tempWhereClause.push("Large Group and School Age Child Care");
+            self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
+
             //-------end of custom filters--------
 
             self.getgeoCondition(address, function (geoCondition) {

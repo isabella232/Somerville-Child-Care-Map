@@ -42,6 +42,25 @@
           <p><a href="index_iframe.html">See iframe view.</a></p>
           <div class='well'>
             <h4>
+              Type of early childhood care
+            </h4>
+            <ul class='inputs-list unstyled'>
+              <li>
+                <label class='checkbox inline'>
+                  <input type='checkbox' id='cbType1' />
+                  <span class='filter-box filter-blue'></span>
+                  Family child care
+                </label>
+              </li>
+              <li>
+                <label class='checkbox inline'>
+                  <input type='checkbox' id='cbType2' />
+                  <span class='filter-box filter-yellow'></span>
+                  Child care center
+                </label>
+              </li>
+            </ul>
+            <h4>
               Address <small>(<a id='find_me' href='#'>find me</a>)</small>
             </h4>
             <p>
@@ -59,28 +78,7 @@
               </label>
             </p>
 
-<!--             <br />
-            <h4>Custom filters and views</h4>
-            <p>Take a look at the <a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples'>wiki</a> to see how to add your own custom filters and views like:</p>
-            <div class='row'>
-              <div class='col-md-6'>
-                <ul>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-checkboxes'>Checkboxes</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-radiobuttons'>Radio buttons</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-drop-down-lists'>Drop down lists</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-textsearches'>Text searches</a></li>
-                </ul>
-              </div>
-              <div class='col-md-6'>
-                <ul>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-sliders'>Sliders</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-date-sliders'>Date sliders</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/List-search-results'>Results lists</a></li>
-                </ul>
-              </div>
-            </div>
-            <br />
- -->            <a class='btn btn-primary' id='search' href='#'>
+            <a class='btn btn-primary' id='search' href='#'>
               <i class='glyphicon glyphicon-search'></i>
               Search
             </a>
@@ -123,7 +121,7 @@
           var myMap = new MapsLib({
             fusionTableId:      "1fE4R2xMwfCiAWOAbCRoB6caYArVSdyte7_vzD20N",
             googleApiKey:       "AIzaSyBZPjfF7WC8FwBRl2AR20BBb4JTk6TUByg",
-            locationColumn:     "geometry",
+            locationColumn:     "Address",
             map_center:         [42.3875, -71.1000],
             locationScope:      "somerville",
           });
